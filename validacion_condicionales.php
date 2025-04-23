@@ -25,21 +25,17 @@
 </style>
 <?php
 if(isset($_POST["enviando"])){
-    $nombre=$_POST["nombre_usuario"];
     $contra=$_POST["contra"];
+    $nombre=$_POST["nombre_usuario"];
+/*
+if($edad<18){
+    echo "Eres mayor de edad.";
+}else{
+    echo "Eres menor de edad";
+}*/
 
-    switch(true){
-        case $nombre=="Maria"  && $contra==1234:
-            echo "Puedes ingresar";
-        break;
-        case $nombre=="Pedro"  && $contra==1234:
-            echo "Puedes ingresar";
-        break;
-        case $nombre=="Yefer"  && $contra==1234:
-            echo "Puedes ingresar";
-        break;
-    
-        default:
-            echo "No autorizado";
-}}
+//esta es la condición ternaria, que hace lo mismo del if pero reducido
+
+echo $nombre=="Yefer" && $contra=="1234" ? "Correcto. Puedes entrar." : "Datos invalidos. Intenta de nuevo.";
+}
 ?>
