@@ -24,21 +24,18 @@
         }
 </style>
 <?php
-
 if(isset($_POST["enviando"])){
-    $edad=$_POST["edad_usuario"];
-    if($edad<18){
-        echo "Eres menor de edad.";
-    }
-    else if($edad>17 && $edad<=40){
-        echo "Eres mayor de edad y joven.";
-    }
-    else if($edad>40 && $edad<=80){
-        echo "Ya no eres tan joven.";
-    }
-    elseif($edad>80){
-        echo "Ya estás muy viejo. Cuídate.";
-    }
-}
+    $contra=$_POST["contra"];
+    $nombre=$_POST["nombre_usuario"];
+/*
+if($edad<18){
+    echo "Eres mayor de edad.";
+}else{
+    echo "Eres menor de edad";
+}*/
 
+//esta es la condición ternaria, que hace lo mismo del if pero reducido. Se puede usar solo para if sencillo, de true o false.
+
+echo $nombre=="Yefer" && $contra=="1234" ? "Correcto." : "Datos invalidos";
+}
 ?>
