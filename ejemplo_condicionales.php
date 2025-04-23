@@ -35,7 +35,7 @@
 
     <h1>USANDO OPERADORES DE COMPARACIÓN</h1>
 
-    <form action="validacion.php" method="post" name="datos_usuario" id="datos_usuario">
+    <form action="validacion_condicionales.php" method="post" name="datos_usuario" id="datos_usuario">
         <table width="30%" align="center">
             <tr>
                 <td>Nombre:</td>
@@ -57,6 +57,9 @@
         </table>
     </form>
 <?php
+
+
+
 ?>
 </body>
 </html>

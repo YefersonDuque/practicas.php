@@ -24,15 +24,21 @@
         }
 </style>
 <?php
-        if (isset($_POST["enviando"])) {
 
-            $usuario = $_POST["nombre_usuario"];
-            $edad = $_POST["edad_usuario"];
+if(isset($_POST["enviando"])){
+    $edad=$_POST["edad_usuario"];
+    if($edad<18){
+        echo "Eres menor de edad.";
+    }
+    else if($edad>17 && $edad<=40){
+        echo "Eres mayor de edad y joven.";
+    }
+    else if($edad>40 && $edad<=80){
+        echo "Ya no eres tan joven.";
+    }
+    elseif($edad>80){
+        echo "Ya estás muy viejo. Cuídate.";
+    }
+}
 
-            if ($usuario == "Yefer" && $edad >= 18) {
-                echo "<p class='validado'>Puedes entrar</p>";
-            } else {
-                echo "<p class='no_validado'>No puedes entrar</p>";
-            }
-        }
-    ?>
+?>
