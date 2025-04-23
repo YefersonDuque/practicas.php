@@ -36,6 +36,6 @@ if($edad<18){
 
 //esta es la condición ternaria, que hace lo mismo del if pero reducido
 
-echo $nombre=="Yefer" && $contra=="1234" ? "Correcto." : "Datos invalidos";
+echo $nombre=="Yefer" && $contra=="1234" ? "Correcto. Puedes entrar." : "Datos invalidos. Intenta de nuevo.";
 }
 ?>
