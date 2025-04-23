@@ -1,0 +1,78 @@
+
+🧾 GUÍA COMPLETA GIT + GITHUB
+✅ Desde el inicio hasta merge de ramas
+(Cada paso incluye explicación y ejemplo)
+
+🔹 1. Iniciar un repositorio Git local
+git init
+> Inicia un repositorio Git en la carpeta actual.
+
+🔹 2. Agregar el archivo README.md (u otros archivos)
+git add README.md
+> Añade ese archivo al área de preparación (staging). Puedes usar . para agregar todos.
+
+🔹 3. Hacer el primer commit
+git commit -m "first commit"
+> Guarda los archivos agregados con un mensaje que describe el cambio.
+
+🔹 4. Cambiar el nombre de la rama principal (opcional pero recomendado)
+git branch -M main
+> Renombra la rama actual (por defecto master) a main.
+
+🔹 5. Conectar tu repositorio local con GitHub
+git remote add origin https://github.com/TU_USUARIO/TU_REPOSITORIO.git
+> Enlaza tu proyecto local con el repositorio remoto en GitHub.
+
+🔹 6. Subir el proyecto a GitHub por primera vez
+git push -u origin main
+> Sube tu rama main al repositorio remoto. -u la vincula para futuros pushes.
+
+🚧 A partir de aquí: Trabajando con ramas
+
+🔸 7. Crear una nueva rama y moverse a ella
+git checkout -b nombre-de-la-rama
+> Crea y cambia a una nueva rama. Ejemplo: git checkout -b operadores_matematicosa
+
+🔸 8. Hacer tus cambios, luego agregarlos
+git add .
+> Agrega todos los archivos modificados.
+
+🔸 9. Hacer commit de esos cambios
+git commit -m "Descripción de los cambios"
+> Guarda tus cambios con un mensaje descriptivo.
+
+🔸 10. Subir la rama al repositorio remoto
+git push -u origin nombre-de-la-rama
+> Sube tu rama al repositorio GitHub. Ej: git push -u origin operadores_matematicosa
+
+🔄 Unir ramas (merge)
+
+🔸 11. Cambiar a la rama principal
+git checkout main
+> Vuelves a la rama principal main.
+
+🔸 12. Unir la rama secundaria con main
+git merge nombre-de-la-rama
+> Aplica los cambios de la rama secundaria. Ej: git merge operadores_matematicosa
+
+🔸 13. Subir los cambios de la rama main con el merge
+git push origin main
+> Sube los cambios ya fusionados al repositorio GitHub.
+
+🧹 (Opcional) Eliminar la rama que ya fue fusionada
+
+🔸 14. Eliminar rama local
+git branch -d nombre-de-la-rama
+> Elimina la rama en tu PC si ya no la necesitas.
+
+🔸 15. Eliminar rama remota en GitHub
+git push origin --delete nombre-de-la-rama
+> Borra la rama del repositorio GitHub. Ej: git push origin --delete operadores_matematicosa
+
+👀 Extra: Ver ramas disponibles
+git branch
+> Muestra todas las ramas locales.
+
+🔁 Cambiar de rama
+git checkout nombre-de-la-rama
+> Cambia entre ramas. Ej: git checkout main
