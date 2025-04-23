@@ -1,0 +1,69 @@
+# Contenido específico desde que el usuario ya tiene la rama "main" (origin) y desea trabajar con una nueva rama
+
+guia_ramas_git = """
+🧾 GUÍA RÁPIDA: TRABAJAR CON RAMAS EN GIT Y GITHUB
+
+🔸 Supuesto inicial: Ya estás en la rama principal (main/origin)
+
+✅ 1. Crear una nueva rama y cambiarte a ella
+git checkout -b nombre-de-la-rama
+> Crea una nueva rama local y te cambia automáticamente a ella.
+Ejemplo: git checkout -b operadores_matematicosa
+
+✅ 2. Hacer cambios en tus archivos
+> Modifica tus archivos localmente con el editor de tu preferencia.
+
+✅ 3. Agregar los archivos modificados al staging
+git add .
+> Agrega todos los archivos modificados para prepararlos para el commit.
+
+✅ 4. Hacer commit de tus cambios
+git commit -m "Descripción de los cambios"
+> Guarda los cambios localmente con un mensaje descriptivo.
+
+✅ 5. Subir la nueva rama al repositorio remoto (GitHub)
+git push -u origin nombre-de-la-rama
+> Sube la nueva rama al repositorio GitHub y la vincula para futuros pushes.
+Ejemplo: git push -u origin operadores_matematicosa
+
+🛠 6. Fusionar tu rama con la rama principal (main)
+
+✅ 7. Cambiar de vuelta a la rama principal (main)
+git checkout main
+> Cambia de nuevo a la rama principal.
+
+✅ 8. Traer los últimos cambios del repositorio remoto (opcional pero recomendado)
+git pull origin main
+> Asegúrate de que tu rama principal esté actualizada.
+
+✅ 9. Hacer merge de la rama secundaria con la principal
+git merge nombre-de-la-rama
+> Fusiona los cambios realizados en la rama secundaria con la principal.
+Ejemplo: git merge operadores_matematicosa
+
+✅ 10. Subir los cambios fusionados a GitHub
+git push origin main
+> Sube los cambios finales a GitHub en la rama principal.
+
+🧹 (Opcional) Eliminar la rama que ya fue fusionada
+
+✅ 11. Eliminar la rama local
+git branch -d nombre-de-la-rama
+> Borra la rama de tu equipo local.
+
+✅ 12. Eliminar la rama remota de GitHub
+git push origin --delete nombre-de-la-rama
+> Elimina la rama del repositorio remoto.
+
+🎉 ¡Y listo! Has trabajado con ramas de forma profesional en Git y GitHub.
+"""
+
+# Guardar como archivo .txt
+ruta_ramas_txt = Path("/mnt/data/guia_git_ramas.txt")
+ruta_ramas_txt.write_text(guia_ramas_git, encoding="utf-8")
+
+# Guardar como archivo .md
+ruta_ramas_md = Path("/mnt/data/guia_git_ramas.md")
+ruta_ramas_md.write_text(guia_ramas_git, encoding="utf-8")
+
+ruta_ramas_txt, ruta_ramas_md
