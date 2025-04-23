@@ -44,9 +44,9 @@
                 </td>
             </tr>
             <tr>
-                <td>Edad:</td>
+                <td>Contraseña:</td>
                 <td>
-                    <input type="text" name="edad_usuario" id="edad_usuario">
+                    <input type="text" name="contra" id="contra">
                 </td>
             </tr>
             <tr>
