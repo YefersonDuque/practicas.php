@@ -45,7 +45,7 @@ $resultado2 = match($estado){
 
 echo $resultado2;
 
-//Lanza excpciones si no hay coincidencias.
+//Lanza excepciones si no hay coincidencias. Si no tiene un default y no cumple con lo que se le indica continua pero con error.
 
 $estado = 4;
 
