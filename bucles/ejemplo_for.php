@@ -34,7 +34,7 @@
             continue;
         }
 
-        echo "$i x $j = ". $i*$j . "<br>";
+        print "$i x $j = ". $i*$j . "<br>"; 
         if($j==10){
             echo "------------------------<br>";
         }
