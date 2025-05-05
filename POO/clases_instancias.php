@@ -49,7 +49,7 @@
     }
 
     //Crea una instancia a Persona
-    $persona = new Persona("Yeferson",28,"Masculino","Colombiano");
+    $persona = new Persona("Yeferson",29,"Masculino","Colombiano");
     
     //Acceder a las propiedades 
     echo "Nombre: " . $persona->getNombre() . "<br>";
