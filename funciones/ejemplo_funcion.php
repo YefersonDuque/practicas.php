@@ -24,7 +24,7 @@
     */
 
     function frase_mayus($frase,$conversion=true){
-
+        
         $frase=strtolower($frase);
 
         if($conversion==true){
