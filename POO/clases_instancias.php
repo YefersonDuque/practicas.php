@@ -10,42 +10,53 @@
 <body>
     <?php
 
-    class Coche
-    {
+    class Persona{
 
-        var $ruedas;
-        var $color;
-        var $motor;
+        public function __construct(
+            private string $nombre,
+            private int $edad,
+            private string $genero,
+            private string $nacionalidad
+        ){}
 
-        function __construct()
-        { // Constructor moderno
-            $this->ruedas = 4;
-            $this->color = "";
-            $this->motor = "1600"; // Corrección aquí
+        //Métodos para obtener las propiedades.
+        public function getNombre(){
+            return $this->nombre;
+        }
+        public function getEdad(){
+            return $this->edad;
+        }
+        public function getGenero(){
+            return $this->genero;
+        }
+        public function getNacionalidad(){
+            return $this->nacionalidad;
         }
 
-        function arrancar()
-        {
-            echo "Estoy arrancando<br>";
+        //Métodos para establecer las propiedades
+        public function setNombre($nombre){
+            $this->nombre=$nombre;
         }
-
-        function girar()
-        {
-            echo "Estoy girando<br>";
+        public function setEdad($edad){
+            $this->edad=$edad;
         }
-
-        function frenar()
-        {
-            echo "Estoy frenando<br>";
+        public function setGenero($genero){
+            $this->genero=$genero;
+        }
+        public function setNacionalidad($nacionalidad){
+            $this->nacionalidad=$nacionalidad;
         }
     }
 
-    $renault = new Coche();
-    $mazda = new Coche();
-    $seat = new Coche();
+    //Crea una instancia a Persona
+    $persona = new Persona("Yeferson",29,"Masculino","Colombiano");
+    
+    //Acceder a las propiedades 
+    echo "Nombre: " . $persona->getNombre() . "<br>";
+    echo "Edad: " . $persona->getEdad() . "<br>";
+    echo "Género: " . $persona->getGenero() . "<br>";
+    echo "Nacionalidad: " . $persona->getNacionalidad() . "<br>";
 
-    $mazda->girar();
-    echo $mazda->ruedas;
     ?>
 </body>
 
