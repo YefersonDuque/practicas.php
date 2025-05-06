@@ -38,14 +38,23 @@
         {
             echo "Estoy frenando<br>";
         }
+        function establecer_color($nombre_coche,$color_coche){
+            $this->color=$color_coche;
+
+            echo "El color del coche " . $nombre_coche . " es: " . $this->color."<br>";
+        }
     }
 
     $renault = new Coche();
     $mazda = new Coche();
     $seat = new Coche();
 
-    $mazda->girar();
-    echo $mazda->ruedas;
+    // $mazda->girar();
+    // echo $mazda->ruedas;
+
+    $renault->establecer_color("Renaul","Rojo");
+    $seat->establecer_color("Seat","Azul");
+
     ?>
 </body>
 
